@@ -1,0 +1,107 @@
+<ion-content>
+  <!-- Logo -->
+  <div class="logo-container">
+    <img
+      class="logo"
+      src="../../assets/Captura de tela 2025-08-23 152632.png"
+      alt="Logo"
+    />
+  </div>
+
+  <!-- Formulário de cadastro -->
+  <div class="login">
+    <div class="textlogin">
+      <h1>Cadastro</h1>
+      <h2>Acompanhe sua plantação de forma inteligente</h2>
+    </div>
+
+    <div class="inputs">
+      <!-- Email -->
+      <div class="input-group">
+        <p>Email</p>
+        <div class="inputdabbzinha">
+          <ion-input
+            [(ngModel)]="email"
+            class="custom-input"
+            type="email"
+            placeholder="exemplo@email.com"
+          ></ion-input>
+        </div>
+      </div>
+
+      <!-- Localização -->
+      <div class="local">
+        <div class="uf">
+          <p class="textinput">Estado</p>
+          <ion-select
+            [(ngModel)]="uf"
+            aria-label="UF"
+            interface="popover"
+            placeholder="UF"
+          >
+            <ion-select-option *ngFor="let u of ufs" [value]="u">
+              {{ u }}
+            </ion-select-option>
+          </ion-select>
+        </div>
+
+        <div class="cidade">
+          <p class="textinput">Cidade</p>
+          <ion-select
+            [(ngModel)]="cidade"
+            class="ion-select_cidade"
+            aria-label="Cidade"
+            interface="popover"
+            placeholder="Cidade"
+          >
+            <ion-select-option *ngFor="let c of cidades" [value]="c">
+              {{ c }}
+            </ion-select-option>
+          </ion-select>
+        </div>
+      </div> <!-- fecha .local -->
+
+      <!-- Senha -->
+      <div class="input-group">
+        <p>Senha</p>
+        <div class="inputdabbzinha">
+          <ion-input
+            [(ngModel)]="senha"
+            class="custom-input"
+            type="password"
+            placeholder="sua senha"
+          >
+            <ion-input-password-toggle
+              slot="end"
+              color="red"
+            ></ion-input-password-toggle>
+          </ion-input>
+        </div>
+      </div>
+
+      <!-- Confirme a senha -->
+      <div class="input-group">
+        <p>Confirme sua senha</p>
+        <div class="inputdabbzinha">
+          <ion-input
+            [(ngModel)]="senha2"
+            class="custom-input"
+            type="password"
+            placeholder="sua senha novamente"
+          ></ion-input>
+        </div>
+      </div>
+
+      <!-- Botão -->
+      <div class="actions">
+        <button (click)="cadastrar()">Entrar</button>
+
+        <!-- Link para cadastro -->
+        <div class="align-container">
+          <p>Já tem uma conta?</p>
+          <a class="cadastro" routerLink="/login">Login</a>
+        </div>
+      </div>
+    </div> <!-- fecha .inputs -->
+  </div> <!-- fecha .login -->
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-content>
+  <!-- Logo -->
+  <div class="logo-container">
+    <img class="logo" src="../../assets/Captura de tela 2025-08-23 152632.png" alt="Logo">
+  </div>
+
+  <!-- Formulário de login -->
+  <div class="login">
+    <div class="textlogin">
+      <h1>Login</h1>
+      <h2>Seja bem-vindo de volta!</h2>
+    </div>
+
+    <div class="inputs">
+
+      <!-- Email -->
+      <div class="input-group">
+        <p>Email</p>
+        <div class="inputdabbzinha">
+          <ion-input [(ngModel)]="email" class="custom-input" type="email" placeholder="exemplo@email.com"></ion-input>
+        </div>
+      </div>
+
+      <!-- Senha -->
+      <div class="input-group">
+        <p>Senha</p>
+        <div class="inputdabbzinha">
+          <ion-input [(ngModel)]="senha" class="custom-input" type="password" placeholder="sua senha">
+            <ion-input-password-toggle slot="end" color="red"></ion-input-password-toggle>
+          </ion-input>
+        </div>
+        <a href="#" class="forgot-password">Esqueci minha senha</a>
+      </div>
+
+      <!-- Botão -->
+      <div class="actions">
+        <button (click)="login()">Entrar</button>
+
+        <!-- Link para cadastro -->
+        <div class="align-container">
+          <p>Não tem uma conta?</p>
+          <a class="cadastro" routerLink="/cadastro">Cadastre-se</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</ion-content>

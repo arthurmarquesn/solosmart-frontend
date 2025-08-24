@@ -1,0 +1,58 @@
+<ion-content>
+  <ion-header>
+    <img src="../../assets/logo2.png" alt="">
+    <p>Acompanhe sua plantação de forma <br> inteligente</p>
+    
+   
+  </ion-header>
+
+  <ion-card style="background-color: #E3A330;">
+  <ion-card-header>
+    <ion-card-title><strong>Umidade do Solo</strong></ion-card-title>
+    <ion-icon name="water-outline"></ion-icon>
+  </ion-card-header>
+
+  <ion-card-content>
+    <div class="porcent">
+      <ion-progress-bar value="0.5"></ion-progress-bar>
+      <p>50%</p>
+    </div>
+    <p class="status">Status: <strong>Ideal</strong> 😎</p>
+    <p class="atuali">Última atualização: 10 minutos atrás</p>
+  </ion-card-content>
+</ion-card>
+
+
+  <ion-card style="background-color: #C56D47;">
+  <ion-card-header >
+    <ion-card-title><strong>Temperatura: 27C°</strong></ion-card-title>
+    <ion-icon name="thermometer-outline"></ion-icon>
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <p class="status">Previsão de Chuva: <strong>77%</strong> ☀️</p>
+    <p class="more">Clique para ver mais</p>
+    <p class="atuali">Última atualização: 10 minutos atrás</p>
+  </ion-card-content>
+</ion-card>
+
+
+  <ion-card style="background-color: #2A3D1D;">
+  <ion-card-header >
+    <ion-card-title><strong>Irrigação</strong></ion-card-title>
+    <ion-icon name="funnel-outline"></ion-icon>
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <p class="status"> Última irrigação <strong>2 horas</strong></p>
+    <p class="status">Status: Úmido 🫧</p>
+    <p class="atuali">Última atualização: 10 minutos atrás</p>
+  </ion-card-content>
+</ion-card>
+
+<p class="user-info">{{ userEmail }}</p>
+<p class="user-info">{{ userCidade }}</p>
+
+</ion-content>
