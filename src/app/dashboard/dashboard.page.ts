@@ -14,10 +14,11 @@ import { RouterModule } from '@angular/router';
 export class DashboardPage {
   userEmail = '';
   userCidade = '';
+  userUf = '';
 
   constructor() {
     this.userEmail = localStorage.getItem('userEmail') || '';
     this.userCidade = localStorage.getItem('userCidade') || '';
+    this.userUf = localStorage.getItem('userUf') || '';
   }
-
 }

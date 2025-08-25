@@ -1,11 +1,7 @@
 <ion-content>
   <!-- Logo -->
   <div class="logo-container">
-    <img
-      class="logo"
-      src="../../assets/Captura de tela 2025-08-23 152632.png"
-      alt="Logo"
-    />
+    <img class="logo" src="../../assets/Captura de tela 2025-08-23 152632.png" alt="Logo" />
   </div>
 
   <!-- Formulário de cadastro -->
@@ -20,42 +16,34 @@
       <div class="input-group">
         <p>Email</p>
         <div class="inputdabbzinha">
-          <ion-input
-            [(ngModel)]="email"
-            class="custom-input"
-            type="email"
-            placeholder="exemplo@email.com"
-          ></ion-input>
+          <ion-input [(ngModel)]="email" class="custom-input" type="email" placeholder="exemplo@email.com"></ion-input>
         </div>
       </div>
 
       <!-- Localização -->
       <div class="local">
+        <!-- Estado -->
         <div class="uf">
           <p class="textinput">Estado</p>
           <ion-select
-            [(ngModel)]="uf"
-            aria-label="UF"
-            interface="popover"
-            placeholder="UF"
-          >
-            <ion-select-option *ngFor="let u of ufs" [value]="u">
-              {{ u }}
-            </ion-select-option>
-          </ion-select>
+          [(ngModel)]="ufSelecionadaId"
+          (ionChange)="carregarCidades()"
+          placeholder="Selecione o Estado"
+        >
+          <ion-select-option *ngFor="let u of ufs" [value]="u.id" (click)="ufSelecionadaSigla = u.sigla">
+            {{ u.nome }}
+          </ion-select-option>
+        </ion-select>
+        
         </div>
 
+        <!-- Cidade -->
         <div class="cidade">
           <p class="textinput">Cidade</p>
-          <ion-select
-            [(ngModel)]="cidade"
-            class="ion-select_cidade"
-            aria-label="Cidade"
-            interface="popover"
-            placeholder="Cidade"
-          >
-            <ion-select-option *ngFor="let c of cidades" [value]="c">
-              {{ c }}
+          <ion-select [(ngModel)]="cidadeSelecionada" class="ion-select_cidade" aria-label="Cidade" interface="popover"
+            placeholder="Cidade">
+            <ion-select-option *ngFor="let c of cidades" [value]="c.nome">
+              {{ c.nome }}
             </ion-select-option>
           </ion-select>
         </div>
@@ -65,16 +53,8 @@
       <div class="input-group">
         <p>Senha</p>
         <div class="inputdabbzinha">
-          <ion-input
-            [(ngModel)]="senha"
-            class="custom-input"
-            type="password"
-            placeholder="sua senha"
-          >
-            <ion-input-password-toggle
-              slot="end"
-              color="red"
-            ></ion-input-password-toggle>
+          <ion-input [(ngModel)]="senha" class="custom-input" type="password" placeholder="sua senha">
+            <ion-input-password-toggle slot="end" color="red"></ion-input-password-toggle>
           </ion-input>
         </div>
       </div>
@@ -83,12 +63,8 @@
       <div class="input-group">
         <p>Confirme sua senha</p>
         <div class="inputdabbzinha">
-          <ion-input
-            [(ngModel)]="senha2"
-            class="custom-input"
-            type="password"
-            placeholder="sua senha novamente"
-          ></ion-input>
+          <ion-input [(ngModel)]="senha2" class="custom-input" type="password"
+            placeholder="sua senha novamente"></ion-input>
         </div>
       </div>
 
@@ -96,12 +72,12 @@
       <div class="actions">
         <button (click)="cadastrar()">Entrar</button>
 
-        <!-- Link para cadastro -->
+        <!-- Link para login -->
         <div class="align-container">
           <p>Já tem uma conta?</p>
           <a class="cadastro" routerLink="/login">Login</a>
         </div>
       </div>
-    </div> <!-- fecha .inputs -->
-  </div> <!-- fecha .login -->
+    </div>
+  </div>
 </ion-content>
