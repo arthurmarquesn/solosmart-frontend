@@ -22,7 +22,12 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadComponent: () => import('./dashboard/dashboard.page').then( m => m.DashboardPage)
-  }
+  },
+  {
+    path: 'redefsenha',
+    loadComponent: () => import('./redefsenha/redefsenha.page').then( m => m.RedefsenhaPage)
+  },
+ 
 ];
 
 @NgModule({
