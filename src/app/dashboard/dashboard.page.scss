@@ -7,11 +7,23 @@ ion-header{
     box-shadow: none;
 }
 
-ion-header img{
+.logo{
     width: 200px;
     height: auto;
-    margin-top: 50px;
+    margin-top: 50px;   
+    animation: slideUp 0.5s ease forwards;
 }
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
 
 ion-header p{
     font-family: Poppins;
